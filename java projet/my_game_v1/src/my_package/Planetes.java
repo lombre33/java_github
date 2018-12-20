@@ -111,15 +111,22 @@ public class Planetes
 			top.getX(),top.getY(),
 			right.getX(),right.getY(),
 			left.getX(),left.getY() });
-			System.out.println(j);
 			this.spaceShipsOut++;
 			j++;
 		
 		}
 		else
 		{
+			top.rotation(- ((j-1)*this.angle + this.angle + 180 ), this.center);
+			right.rotation(-((j-1)*this.angle + this.angle +  180 ), this.center);
+			left.rotation(-((j-1)*this.angle + this.angle + 180) , this.center);
+			spaceShip.Tshape.setFill(Color.YELLOW);
+			spaceShip.Tshape.getPoints().addAll(new Double[]{
+			top.getX(),top.getY(),
+			right.getX(),right.getY(),
+			left.getX(),left.getY() });
 			this.spaceShipsOut++;
-			System.out.println("si si on est ici ");
+			
 		}
     	
 		return spaceShip;

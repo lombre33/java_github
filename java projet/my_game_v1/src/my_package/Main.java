@@ -83,41 +83,19 @@ public class Main extends Application {
     		}
     	}
     	// End of Planets generations 
+    	
+    	
     	// Starts of Vessels generation
+    	
     	//boucle avec nbr vaisseau qui renvoit le vaisseau puis afficheage chaque tour
  
 		
-    	for(int i = 0; i < 8; i++)
+    	for(int i = 0; i < 15; i++)
     	{
     	Planetes b = PlanetList.get(0);
-       /* Coordinates top = new Coordinates(b.Xcenter , b.top.y - 20);
-        Coordinates left = new Coordinates(b.Xcenter , b.top.y - 20);
-        Coordinates right = new Coordinates(b.Xcenter , b.top.y - 20);
-    	Polygon Tshape = new Polygon();
-    	Tshape.setFill(Color.WHITE);
-        
-    	SpaceShip spaceShip = new SpaceShip(Color.WHITE,top,left,right,Tshape);
-    	
-    	
-   
-    	spaceShip.Tshape.getPoints().addAll(new Double[]{
-    	    0.0, 0.0,
-    	    20.0, 10.0,
-    	    10.0, 20.0 });
-    	//spaceShip = b.generateSpaceShip();*/
     	SpaceShip ship = b.generateSpaceShip();
     	root.getChildren().add(ship.Tshape);
-    	/*
-    		Planetes b = PlanetList.get(0);
-    		//Polygon spaceShip = b.generateSpaceShip();
-    		Polygon spaceShip = new Polygon();
-    		spaceShip.setFill(Color.WHITE);
-    		spaceShip.getPoints().addAll(new Double[]{
-        			5.0 ,  20.0,
-        		    0.0 , 20.0,
-        			21.0 , 20.0});
-    		root.getChildren().add(spaceShip);
-    		System.out.println("ca aurait du");*/
+
     	}
     	
     	//End of Vessels generations
